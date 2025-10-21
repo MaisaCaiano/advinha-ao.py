@@ -26,3 +26,9 @@ while acertou == True:
 
   if numero != numero_adv:
     print(f"Você errou, restam {tentativas} tentativa{s}..")
+
+  if numero > numero_adv:
+    print("Mais baixo")
+  if numero < numero_adv:
+    print("Mais alto")
+
