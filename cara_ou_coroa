@@ -1,0 +1,12 @@
+import random
+
+def dado(n=2):
+    return random.randint(1, n)
+
+def cara_ou_coroa():
+    if dado(2) == 1:
+        return("Cara")
+    else:
+        return("Coroa")
+
+print(cara_ou_coroa())
