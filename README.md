@@ -1,1 +1,0 @@
-# advinha-ao.py
