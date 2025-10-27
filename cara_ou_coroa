@@ -19,3 +19,14 @@ num2 = float(input("digite outro numero: "))
 
 m = coisa(num1, num2)
 print(f"A média é: {m}")
+
+
+def coisa(n):
+    numero = int(input("Digite um numero: "))
+    soma = 0
+    for numero in range(0, numero):
+        soma += numero
+    return soma
+
+m = coisa(0) 
+print(f"A somatoria é: {m}")
