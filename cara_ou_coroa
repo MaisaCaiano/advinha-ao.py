@@ -10,3 +10,12 @@ def cara_ou_coroa():
         return("Coroa")
 
 print(cara_ou_coroa())
+
+
+def coisa(arg1, arg2):
+    return (arg1 + arg2) /2
+num1 = float(input("digite um numero: "))
+num2 = float(input("digite outro numero: "))
+
+m = coisa(num1, num2)
+print(f"A média é: {m}")
