@@ -33,3 +33,22 @@ while acertou == True:
             print("Mais baixo")
         if numero < numero_adv:
             print("Mais alto")
+
+
+
+
+def main():  
+    numero = float(input("Digite um numero: "))
+    ope = input("Digite a operação: ")
+    coisa(numero, ope)
+
+def coisa(n, op):
+    for i in range(11):
+        if op == "+":
+            print(f"{n} + {i} = {n + i}")
+        elif op == "-":
+            print(f"{n} - {i} = {n - i}")
+        elif op == "*":
+            print(f"{n} * {i} = {n * i}")
+        elif op == "/":
+
