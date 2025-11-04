@@ -12,3 +12,38 @@ def main():
         print(f"fib({i}): {fib(i)}")
 
 main()
+
+
+
+
+alunos = [] 
+
+while(True):
+    operacao = int(input("\n==========\n\nSelecione a operacao desejada:\n\n\t1: adicionar aluno\n\t2: exibir aluno\n\t3: remover aluno\n\t4: exibir lista de alunos\n\t5: remover todos os alunos\n\t6: sair\n\nOperacao> "))
+    
+    if operacao == 1:
+        novo = input("Digite o nome de um novo aluno: ")
+        alunos.append((novo))
+        print(f"Aluno '{novo}' adicionado")
+    elif operacao == 2:
+        indice = int(input("Digite o indice de um aluno: "))
+        if indice >= len(alunos) or indice <0:
+            print("Erro, indice invalido.")
+        print(alunos[indice])
+    elif operacao == 3:
+        print("Alunos existentes: ")       
+        for aluno in range(0, len(alunos)):
+            print([aluno])
+        remover = int(input("Digite o indice de algum aluno para remover da lista: "))
+        del alunos[remover]
+        
+    elif operacao == 4:
+        for lista in (alunos):
+            print(lista)
+
+    elif operacao == 5:
+        del alunos
+    elif operacao == 6:
+        exit()
+    else:
+        print("Erro: operacao desconhecida!")
