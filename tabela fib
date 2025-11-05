@@ -49,3 +49,18 @@ while(True):
                 break
         if not aluno_removido:          
                 print("Erro: aluno não encontrado.")
+        
+    
+
+    elif operacao == 4:
+        for lista in (alunos):
+            print(lista)
+
+    elif operacao == 5:
+        alunos.clear()
+        print("Alunos removidos.")
+    elif operacao == 6:
+        exit()
+    else:
+        print("Erro: operacao desconhecida!")
+        
