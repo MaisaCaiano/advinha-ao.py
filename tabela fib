@@ -31,12 +31,16 @@ while(True):
             print("Erro, indice invalido.")
         print(alunos[indice])
     elif operacao == 3:
+        if not alunos:
+            print("Alunos inexistentes")
         print("Alunos existentes: ")       
         for aluno in range(0, len(alunos)):
-            print([aluno])
-        remover = int(input("Digite o indice de algum aluno para remover da lista: "))
-        del alunos[remover]
-        
+            print(alunos[aluno])
+        remover = (input("Digite o nome de algum aluno para remover da lista: "))
+        for  in range(0, len(remover)):
+            del ([])
+    
+
     elif operacao == 4:
         for lista in (alunos):
             print(lista)
