@@ -26,28 +26,26 @@ while(True):
         alunos.append((novo))
         print(f"Aluno '{novo}' adicionado")
     elif operacao == 2:
+        for aluno in range(0, len(alunos)):
+            print([aluno])
         indice = int(input("Digite o indice de um aluno: "))
         if indice >= len(alunos) or indice <0:
             print("Erro, indice invalido.")
-        print(alunos[indice])
+        else:
+            print(alunos[indice])
     elif operacao == 3:
         if not alunos:
             print("Alunos inexistentes")
         print("Alunos existentes: ")       
         for aluno in range(0, len(alunos)):
             print(alunos[aluno])
-        remover = (input("Digite o nome de algum aluno para remover da lista: "))
-        for  in range(0, len(remover)):
-            del ([])
-    
-
-    elif operacao == 4:
-        for lista in (alunos):
-            print(lista)
-
-    elif operacao == 5:
-        del alunos
-    elif operacao == 6:
-        exit()
-    else:
-        print("Erro: operacao desconhecida!")
+        nome = (input("Digite o nome de algum aluno para remover da lista: "))
+        aluno_removido = False
+        for i in range(0, len(alunos)):
+            if nome == alunos[i]:
+                del alunos[i]
+                aluno_removido = True
+                print("Aluno removido!")
+                break
+        if not aluno_removido:          
+                print("Erro: aluno não encontrado.")
