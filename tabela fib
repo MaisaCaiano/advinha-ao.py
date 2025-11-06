@@ -63,4 +63,11 @@ while(True):
         exit()
     else:
         print("Erro: operacao desconhecida!")
-        
+
+
+d = {}
+d["nome"] = "Maisa"
+d["idade"] = 18
+d["filme"] = "Invocação do mal"
+
+for ch, _ in d.items():
