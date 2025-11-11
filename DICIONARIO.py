@@ -1,3 +1,4 @@
+
 alunos = {}
 
 while(True):
