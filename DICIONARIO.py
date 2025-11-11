@@ -1,4 +1,3 @@
-
 alunos = {}
 
 while(True):
@@ -47,12 +46,13 @@ while(True):
         aluno_nome = input("Nome do aluno> ")
         if aluno_nome in alunos:
             add_nota = float(input("Nota> "))
-            print(f"Nota> {add_nota} adicionada.")
             if 0.0 <= add_nota <= 10.0:
                 alunos[aluno_nome].append(add_nota)
+                print(f"Nota> {add_nota} adicionada.")
+            else:
+                print("Erro: nota inválida!")
         else:
-            print("Erro: Aluno não encontrado!")
-
+            print("Erro: aluno não encontrado!")
     elif operacao == 7:
         exit()
     else:
