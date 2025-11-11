@@ -40,7 +40,7 @@ while(True):
             print(f"{ch}: {val}")
             
     elif operacao == 5:
-        alunos.clear()
+        alunos = {}
         
     elif operacao == 6:
         aluno_nome = input("Nome do aluno> ")
