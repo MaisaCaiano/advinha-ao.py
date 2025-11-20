@@ -4,7 +4,8 @@ pygame.init()
 
 
 clock = pygame.time.Clock()
-velocidade_tick = 100
+velocidade_tick = 130 
+
 
 pygame.display.set_caption("Pong")
 pygame.font.init()
@@ -41,28 +42,35 @@ linha = pygame.Rect(int(tela_largura / 2), 0, 5, tela_altura)
 
 bola_centro_x = tela_largura/2
 bola_centro_y = tela_altura/2
-bola_raio = 35
+bola_raio = 66
 bola_velocidade_x = 5
 bola_velocidade_y = 5
-bola = pygame.Rect(bola_centro_x, bola_centro_y, bola_raio, bola_raio)
+bola = pygame.Rect(bola_centro_x, bola_centro_y, bola_raio, bola_raio,)
+
+"""bola_centro_x2 = tela_largura/3
+bola_centro_y2 = tela_altura/3
+bola_raio2 = 40
+bola_velocidade_x2 = 5
+bola_velocidade_y2 = 5
+bola2 = pygame.Rect(bola_centro_x2, bola_centro_y2, bola_raio2, bola_raio2,)"""
 
 while True:
-    tela.fill((0, 0, 0))
+    tela.fill((79, 76, 79))
 
-    pygame.draw.rect(tela, (255, 255, 255), linha)
+    pygame.draw.rect(tela, (225, 255, 225), linha)
     pygame.draw.rect(tela, (143, 0, 225), retangulo_1)
     pygame.draw.rect(tela, (143, 0, 225), retangulo_2)
-    pygame.draw.rect(tela, (225, 225, 225), bola, border_radius=bola_raio)
+    pygame.draw.rect(tela, (0, 255, 247), bola,)
 
-    pontos_1_texto = fonte.render("Player 1: {}".format(pontos_1), True, (0, 255, 0))
-    pontos_2_texto = fonte.render("Player 2: {}".format(pontos_2), True, (0, 255, 255))
+    pontos_1_texto = fonte.render("Player 1: {}".format(pontos_1), True, (255, 130, 243))
+    pontos_2_texto = fonte.render("Player 2: {}".format(pontos_2), True, (0, 80, 240))
     pontos_1_retangulo = pontos_1_texto.get_rect()
     pontos_2_retangulo = pontos_2_texto.get_rect()
-    pontos_1_retangulo.center = (tela_largura*0.25, tela_altura*0.1)
-    pontos_2_retangulo.center = (tela_largura*0.75, tela_altura*0.1)
+    pontos_1_retangulo.center = (tela_largura*0.25, tela_altura*0.95)
+    pontos_2_retangulo.center = (tela_largura*0.75, tela_altura*0.95)
     tela.blit(pontos_1_texto, pontos_1_retangulo)
     tela.blit(pontos_2_texto, pontos_2_retangulo)
-
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -116,3 +124,4 @@ while True:
 
     pygame.display.flip()
     clock.tick(velocidade_tick)
+
